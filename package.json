@@ -12,14 +12,15 @@
   "license": "MIT",
   "commands": [
     {
-      "name": "index",
-      "title": "Show List and Detail",
-      "description": "Template for showing a static list and a detail view",
+      "name": "unapprovedMods",
+      "title": "Show Unapproved Mods",
+      "description": "Open a list of mods that still require approval",
       "mode": "view"
     }
   ],
   "dependencies": {
-    "@raycast/api": "^1.45.1"
+    "@raycast/api": "^1.45.1",
+    "@raycast/utils": "^1.4.14"
   },
   "devDependencies": {
     "@types/node": "18.8.3",
@@ -31,6 +32,15 @@
     "prettier": "^2.5.1",
     "typescript": "^4.4.3"
   },
+  "preferences": [
+    {
+      "name": "modIoAPIToken",
+      "title": "mod.io OAuth Token",
+      "description": "Your long-lived OAuth token, can be generated from your user account settings in mod.io",
+      "type": "password",
+      "required": true
+    }
+  ],
   "scripts": {
     "build": "ray build -e dist",
     "dev": "ray develop",
